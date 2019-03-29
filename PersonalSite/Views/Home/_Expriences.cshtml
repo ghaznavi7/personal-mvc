@@ -1,0 +1,16 @@
+﻿
+@if (Model.Expriences.Count > 0)
+{
+    <h2>سوابق</h2>
+
+    foreach (var exprience in Model.Expriences)
+    {
+        <hr>
+        <div class="row">
+            <div class="col-md-3 col-xs-4">@exprience.Position</div>
+            <div class="col-md-3 col-xs-4">@exprience.Location</div>
+            <div class="col-md-6 col-xs-4">@exprience.EndDate</div>
+            <div>توضیح: @exprience.Description</div>
+        </div>
+    }
+}

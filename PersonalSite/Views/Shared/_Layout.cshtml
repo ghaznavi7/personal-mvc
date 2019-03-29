@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ghaznavi, mohammad, غزنوی, محمد">
+    <meta name="description" content="سید محمد غزنوی، طراح و برنامه نویس سایت">
+    <meta name="author" content="Sayed Mohammad Ghaznavi">
+    <title>@ViewBag.Title - Ghaznavi's Application</title>
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#c1666b">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    @if (Request.IsAuthenticated)
+    {
+        <style>
+            body {
+                padding-top: 50px;
+            }
+        </style>
+
+        @Html.Partial("_Navbar")
+    }
+
+
+    <div class="container-fluid body-content">
+        @RenderBody()
+    </div>
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Ghaznavi's Application</p>
+    </footer>
+
+    @Scripts.Render("~/bundles/lib")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

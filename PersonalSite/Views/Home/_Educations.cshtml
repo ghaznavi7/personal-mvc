@@ -1,0 +1,16 @@
+﻿
+@if (Model.Educations.Count > 0)
+{
+    <h2>تحصیلات</h2>
+
+    foreach (var education in Model.Educations)
+    {
+        <hr>
+        <div class="row">
+            <div class="col-md-3 col-xs-4">@education.Location</div>
+            <div class="col-md-3 col-xs-4">@education.EndDate</div>
+            <div class="col-md-6 col-xs-4">@education.EarnedCertificate</div>
+            <div>توضیح: @education.Description</div>
+        </div>
+    }
+}

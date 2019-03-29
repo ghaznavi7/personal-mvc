@@ -1,0 +1,127 @@
+﻿@model PersonalSite.Models.Person
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h3>مشخصات اصلی</h3>
+    
+@Html.ActionLink("ویرایش", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary", role = "button" })
+
+<hr />
+<dl class="dl-horizontal">
+
+    <dd>
+        <img class="logo" src="@Model.AvatarLink" alt="عکس بارگزاری نشد">
+    </dd>
+
+    <dd>
+        @using (Html.BeginForm("Index", "people", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="file" name="file" />
+            <input type="submit" value="تأیید" />
+        }
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+    <br />
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Profession)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Profession)
+    </dd>
+    <br />
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Location)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Location)
+    </dd>
+    <br />
+
+    <dt>
+        @Html.DisplayNameFor(model => model.AboutUs)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.AboutUs)
+    </dd>
+    <br />
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Phone)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Phone)
+    </dd>
+    <br />
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Email)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Email)
+    </dd>
+    <br />
+
+    <dt>
+        @Html.DisplayNameFor(model => model.TelegramId)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.TelegramId)
+    </dd>
+    <br />
+
+    <dt>
+        @Html.DisplayNameFor(model => model.TwitterId)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.TwitterId)
+    </dd>
+    <br />
+
+    <dt>
+        @Html.DisplayNameFor(model => model.InstagramId)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.InstagramId)
+    </dd>
+    <br />
+
+    <dt>
+        @Html.DisplayNameFor(model => model.SoroushId)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.SoroushId)
+    </dd>
+    <br />
+
+    <dt>
+        @Html.DisplayNameFor(model => model.LinkedinId)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.LinkedinId)
+    </dd>
+
+</dl>
